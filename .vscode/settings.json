@@ -1,0 +1,8 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true
+    },
+    "python.formatting.provider": "black",
+    // "python.formatting.blackPath": "black",
+    // "python.formatting.blackArgs": []
+}

@@ -1,0 +1,12 @@
+__pycache__
+/env/
+
+/vaelstrom.log
+/config.ini
+/api_results
+
+# pyinstaller/py2exe stuff
+/build
+/dist
+/vaelstrom.spec
+/7z.exe

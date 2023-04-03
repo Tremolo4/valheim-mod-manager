@@ -1,0 +1,54 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cl.exe build active file",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/DDEBUG",
+				"/nologo",
+				"/WX",
+				"/W4",
+				"/Fe:",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"${file}",
+				"/link", "/SUBSYSTEM:CONSOLE",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: cl.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "URL Handler Release Build",
+			"command": "cl.exe",
+			"args": [
+				"/nologo",
+				"/WX",
+				"/W4",
+				"/Ox",
+				"/GS-",
+				"${workspaceFolder}/vaelstrom_url_handler/win32/vaelstrom_url_handler.c",
+				"/link", "/SUBSYSTEM:WINDOWS", "/NODEFAULTLIB", "Ws2_32.lib", "Shell32.lib", "Kernel32.lib"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/vaelstrom_url_handler/win32/"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		}
+	]
+}
